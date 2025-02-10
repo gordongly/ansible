@@ -1,0 +1,9 @@
+---
+- name: File
+  hosts: lab-debian12
+  tasks:
+    - name: Give file text content
+      ansible.builtin.template:
+        src: file_content.j2 
+        dest: /home/jojo/file_content.txt
+        mode: "0644"

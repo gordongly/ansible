@@ -1,3 +1,8 @@
+---
 - name: Patch local VMs of jojo
-  hosts: 
+  hosts: lab-rhel
   tasks: 
+    - name: Patch RHEL server
+      ansible.builtin.dnf:
+        name: '*'
+        state: latest

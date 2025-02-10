@@ -1,0 +1,10 @@
+---
+- name: Patch Debian based servers
+  hosts: lab-ubuntu
+  tasks: 
+    - name: Patch Debian based server
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time= 3600
+        name: '*'
+        state: latest
