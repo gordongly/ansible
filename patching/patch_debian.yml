@@ -1,6 +1,7 @@
 ---
 - name: Patch Debian based servers
-  hosts: lab-ubuntu
+  hosts: ubuntu
+  become: true
   tasks: 
     - name: Patch Debian based server
       ansible.builtin.apt:
