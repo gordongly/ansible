@@ -5,6 +5,6 @@
     - name: Patch Debian based server
       ansible.builtin.apt:
         update_cache: true
-        cache_valid_time= 3600
+        cache_valid_time: 3600 # Updates the apt cache if it is older than the cache_valid_time (seconds)
         name: '*'
         state: latest
